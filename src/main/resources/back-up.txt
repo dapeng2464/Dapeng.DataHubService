@@ -1,0 +1,20 @@
+CREATE SEQUENCE dow_jones_index_id_seq;
+create table DOW_JONES_INDEX(
+	id  integer  PRIMARY KEY  DEFAULT NEXTVAL('dow_jones_index_id_seq'),
+	quarter integer,
+    stock char(6),
+    date date,
+    open numeric(10,2),
+    high numeric(10,3),
+    low numeric(10,2),
+    close numeric(10,2),
+    volume numeric(15),
+    percent_change_price numeric(10,6),
+    percent_change_volume_over_last_week numeric(10,6),
+    previous_weeks_volume numeric(15),
+    next_weeks_open numeric(10,2),
+    next_weeks_close numeric(10,2),
+    percent_change_next_weeks_price numeric(10,6),
+    days_to_next_dividend integer,
+    percent_return_next_dividend numeric(10,6)
+);
